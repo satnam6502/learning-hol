@@ -1,1 +1,0 @@
-demorgan.uo: /Users/satnam/HOL/sigobj/HolKernel.ui /Users/satnam/HOL/sigobj/Parse.ui /Users/satnam/HOL/sigobj/arithmeticTheory.ui /Users/satnam/HOL/sigobj/boolLib.ui /Users/satnam/HOL/sigobj/bossLib.ui /Users/satnam/HOL/sigobj/listTheory.ui 

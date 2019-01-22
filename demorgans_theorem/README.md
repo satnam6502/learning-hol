@@ -2,7 +2,6 @@
 
 Here I try to prove that two circuits have the same behacviour according to [Demorgan's Laws](https://en.wikipedia.org/wiki/De_Morgan%27s_laws). Here is the first circuit:
 
-The first circuit:
 ```
 val DM1_def = Define `DM1 a b = ~(a \/ b)` ;
 ```
@@ -15,7 +14,7 @@ val DM2_def = Define `DM2 a b = ~a /\ ~b` ;
 ```
 This is a circuit which negates the inputs `a` and `b` with an `INV` gate and then feeds the negated inputs to an `OR2` gate.
 
-We can highlight these two definitions in our Emacs buffer and issuing `m-h r` to read these definitions into HOL.
+We can highlight these two definitions in our Emacs buffer and issuing `m-h r` we can read these definitions into HOL.
 
 ```
 > Definition has been stored under "DM1_def"
@@ -38,13 +37,13 @@ Now let's define our goal to be to prove that `DM1 = DM2` by highlighting the te
    : proofs
 ```
 
-To help establish the equivalence of `DM1` and `DM2` lets using a simplification tactic:
+To help establish the equivalence of `DM1` and `DM2` let's use a simplification tactic:
 
 ```
 simp[FUN_EQ_THM]
 ```
 
-by issuing `m-h e` which yields a goal which appropriately wires up the arguments of the `DM1` and `DM2` definitions:
+by highlighting this text and then issuing `m-h e` which yields a goal which appropriately wires up the arguments of the `DM1` and `DM2` definitions:
 
 ```
 1 subgoal:
@@ -62,7 +61,7 @@ Now we can use the general:
 metis_tac[DM1_def, DM2_def]
 ```
 
-tactic (giving it the definitions of `DM1` and `DM2` as arguments) by issuing `m-h e` to complete the proof:
+tactic (giving it the definitions of `DM1` and `DM2` as arguments) by highlighting this text and issuing `m-h e` to complete the proof:
 
 ```
 metis: r[+0+12]+0+0+0+0+0+0+0+1+0+1+0+1#
@@ -91,7 +90,7 @@ Theorem dm `DM1 = DM2`
 val _ = export_theory();
 ```
 
-which can be using by `Holamke`:
+which can be used by `Holamke`:
 
 ```bash
 $ ls
